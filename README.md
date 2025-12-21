@@ -14,20 +14,24 @@
 
 ---
 
-## Deskripsi Proyek 📌
+<h1 id="deskripsi-proyek" align="center">📌 Deskripsi Proyek 📌</h1>
 
-Proyek ini merupakan tugas **Ujian Akhir Praktikum (UAP)** yang bertujuan untuk melakukan **klasifikasi sentimen terhadap komentar pemain game Genshin Impact** berbahasa Indonesia.  
-Analisis sentimen dilakukan menggunakan pendekatan **Machine Learning**, dengan membandingkan model **non-pretrained** dan **pretrained (transfer learning)** berbasis **Deep Learning**.
+Proyek ini merupakan tugas **Ujian Akhir Praktikum (UAP)** yang bertujuan untuk melakukan  
+**klasifikasi sentimen terhadap komentar pemain game Genshin Impact** berbahasa Indonesia.
 
-Selain itu, proyek ini dilengkapi dengan **sistem website sederhana berbasis Streamlit** untuk mendemonstrasikan hasil prediksi sentimen secara interaktif.
+Analisis sentimen dilakukan menggunakan pendekatan **Machine Learning**, dengan membandingkan
+model **non-pretrained** dan **pretrained (transfer learning)** berbasis **Deep Learning**.
+
+Selain itu, proyek ini dilengkapi dengan **sistem website sederhana berbasis Streamlit**
+untuk mendemonstrasikan hasil prediksi sentimen secara interaktif.
 
 ---
 
-## Dataset 📊
+<h1 id="dataset" align="center">📊 Dataset 📊</h1>
 
 - **Jenis Data**: Data teks (komentar pemain)
-- **Bahasa**: Bahasa Indonesia (dengan campuran istilah game dan bahasa Inggris)
-- **Sumber Data**: Hasil scraping komentar pemain game Genshin Impact
+- **Bahasa**: Bahasa Indonesia (campuran istilah game & bahasa Inggris)
+- **Sumber Data**: Hasil scraping komentar pemain Genshin Impact
 - **Jumlah Data**: ±15.000 komentar
 
 ### Label Sentimen
@@ -35,16 +39,15 @@ Selain itu, proyek ini dilengkapi dengan **sistem website sederhana berbasis Str
 - Netral (Others)  
 - Positif  
 
-Karena ukuran dataset cukup besar, dataset **tidak diunggah langsung ke repository GitHub**.
+📌 Karena ukuran dataset cukup besar, dataset **tidak diunggah langsung ke GitHub**.
 
-📊 **Dataset dapat diunduh melalui Google Drive:**  
-👉 **[Link Dataset](https://drive.google.com/drive/folders/1XkfMcM0EVBMt7h1sIF6AGkisJ5mdnME9?usp=sharing)**
+👉 **[Link Dataset – Google Drive](https://drive.google.com/drive/folders/1XkfMcM0EVBMt7h1sIF6AGkisJ5mdnME9?usp=sharing)**
 
 Dataset merupakan **hasil scraping dan pelabelan mandiri**, digunakan **khusus untuk keperluan akademik**.
 
 ---
 
-## Preprocessing
+<h1 id="preprocessing" align="center">🧹 Preprocessing 🧹</h1>
 
 Tahapan preprocessing yang dilakukan meliputi:
 
@@ -53,14 +56,15 @@ Tahapan preprocessing yang dilakukan meliputi:
 - Menghapus data kosong
 - Pelabelan sentimen otomatis berdasarkan rating pengguna
 - Encoding label menggunakan `LabelEncoder`
-- Pembagian data latih dan data uji dengan rasio **80:20**
+- Pembagian data latih dan data uji (**80:20**)
 
 **Catatan:**  
-Pada proyek ini **tidak diterapkan data augmentation**, karena dataset yang digunakan sudah mencukupi dan augmentasi pada data teks berpotensi mengubah makna serta label sentimen.
+Proyek ini **tidak menggunakan data augmentation**, karena pada data teks augmentasi berpotensi
+mengubah makna dan label sentimen.
 
 ---
 
-## Model yang Digunakan
+<h1 id="model-yang-digunakan" align="center">🧠 Model yang Digunakan 🧠</h1>
 
 ### 1️⃣ LSTM (Non-Pretrained)
 - Arsitektur: **Embedding + LSTM + Dense**
@@ -75,21 +79,21 @@ Pada proyek ini **tidak diterapkan data augmentation**, karena dataset yang digu
 ### 3️⃣ DistilBERT (Pretrained)
 - Versi ringan dari BERT
 - Lebih efisien secara komputasi
-- Memberikan performa yang kompetitif
+- Performa kompetitif
 
 ### 4️⃣ IndoBERT (Pretrained)
 - Model: `indobenchmark/indobert-base-p1`
 - Dirancang khusus untuk Bahasa Indonesia
-- Menjadi **model dengan performa terbaik** pada proyek ini
+- **Model dengan performa terbaik**
 
-📦 Model hasil pelatihan **tidak diunggah langsung ke GitHub** karena keterbatasan ukuran file.  
-📥 Model dapat diunduh melalui Google Drive (tautan sama dengan dataset).
+📦 Model tidak diunggah ke GitHub karena keterbatasan ukuran file  
+📥 Model tersedia melalui Google Drive (tautan sama dengan dataset)
 
 ---
 
-## Evaluasi Model 📈
+<h1 id="evaluasi-model" align="center">📈 Evaluasi Model 📈</h1>
 
-Evaluasi model dilakukan menggunakan metrik berikut:
+Evaluasi dilakukan menggunakan:
 - Accuracy
 - Precision
 - Recall
@@ -100,70 +104,60 @@ Evaluasi model dilakukan menggunakan metrik berikut:
 ### Tabel Perbandingan Performa Model
 
 | Model       | Accuracy | Precision (Macro) | Recall (Macro) | F1-score (Macro) |
-|-------------|----------|-------------------|----------------|------------------|
-| LSTM        | 0.33     | 0.11              | 0.33           | 0.17             |
-| BERT        | 0.63     | 0.63              | 0.63           | 0.63             |
-| DistilBERT  | 0.62     | 0.62              | 0.62           | 0.62             |
-| **IndoBERT**| **0.64** | **0.65**          | **0.64**       | **0.64**         |
+|------------|----------|-------------------|----------------|------------------|
+| LSTM       | 0.33     | 0.11              | 0.33           | 0.17             |
+| BERT       | 0.63     | 0.63              | 0.63           | 0.63             |
+| DistilBERT | 0.62     | 0.62              | 0.62           | 0.62             |
+| **IndoBERT** | **0.64** | **0.65** | **0.64** | **0.64** |
 
+---
 
-### Confusion Matrix 
-
-## Confusion Matrix 🔴🟢
-
-| LSTM | IndoBERT | 
-|------|----------|
-| ![CM LSTM](Images/MAT_LSTM.png) | ![CM IndoBERT](Images/MAT_IND.png) | 
-
-| DistilBERT | BERT |
-|------------|------|
-| ![CM DistilBERT](Images/MAT_DISB.png) | ![Confusion Matrix BERT](Images/MAT_BERT.png) |
-
-
-### Learning Curves 📈
+### Confusion Matrix 🔴🟢
 
 | LSTM | IndoBERT |
 |------|----------|
-| ![Learning Curve LSTM](Images/LC_LSTM.png) | ![Learning Curve IndoBERT](Images/LC_IND.png) |
+| ![CM LSTM](Images/MAT_LSTM.png) | ![CM IndoBERT](Images/MAT_IND.png) |
+
+| DistilBERT | BERT |
+|------------|------|
+| ![CM DistilBERT](Images/MAT_DISB.png) | ![CM BERT](Images/MAT_BERT.png) |
 
 ---
 
-## Analisis Hasil 🔍
+### Learning Curves 📉
 
-Berdasarkan hasil evaluasi, **model pretrained berbasis Transformer** secara konsisten menunjukkan performa yang lebih baik dibandingkan model **LSTM non-pretrained**.  
-
-Model **IndoBERT** menghasilkan performa terbaik karena:
-- Menggunakan pretraining khusus Bahasa Indonesia
-- Lebih mampu menangkap konteks kalimat informal dan campuran istilah game
-- Memberikan keseimbangan antara akurasi dan stabilitas prediksi
-
-Hal ini menunjukkan bahwa **Transfer Learning sangat efektif** untuk tugas klasifikasi sentimen teks Bahasa Indonesia.
+| LSTM | IndoBERT |
+|------|----------|
+| ![LC LSTM](Images/LC_LSTM.png) | ![LC IndoBERT](Images/LC_IND.png) |
 
 ---
 
-## Sistem Website (Streamlit) 🔍
+<h1 id="analisis-hasil" align="center">🔍 Analisis Hasil 🔍</h1>
 
-Sistem website sederhana dibangun menggunakan **Streamlit** untuk mendemonstrasikan hasil klasifikasi sentimen secara interaktif.  
-Aplikasi dijalankan **secara lokal** menggunakan model hasil pelatihan.
+Model **pretrained berbasis Transformer** secara konsisten mengungguli model **LSTM non-pretrained**.
 
-### Fitur Website
-- Input teks komentar dari pengguna
+**IndoBERT** memberikan performa terbaik karena:
+- Pretraining khusus Bahasa Indonesia
+- Lebih baik menangkap konteks informal & istilah game
+- Stabil dan seimbang antar kelas
+
+Hal ini menunjukkan bahwa **Transfer Learning sangat efektif** untuk klasifikasi sentimen teks Bahasa Indonesia.
+
+---
+
+<h1 id="sistem-website-streamlit" align="center">🌐 Sistem Website (Streamlit) 🌐</h1>
+
+Aplikasi Streamlit digunakan untuk mendemonstrasikan prediksi sentimen secara interaktif.
+
+### Fitur:
+- Input komentar pengguna
 - Pilihan model (LSTM / BERT / DistilBERT / IndoBERT)
-- Prediksi label sentimen secara langsung
+- Prediksi sentimen secara real-time
 
 ---
 
-## Cara Menjalankan Aplikasi (Lokal) ▶️
+<h1 id="cara-menjalankan-aplikasi-lokal" align="center">▶️ Cara Menjalankan Aplikasi (Lokal)</h1>
 
 ### 1️⃣ Install Dependensi
-
+```bash
 pip install streamlit tensorflow transformers torch scikit-learn
-
-### 2️⃣ Jalankan Aplikasi Streamlit
-
-Pastikan berada di folder project, lalu jalankan: streamlit run app.py
-Aplikasi akan berjalan pada browser melalui : http://localhost:8501
-
-
-
-
