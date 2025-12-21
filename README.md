@@ -110,24 +110,24 @@ Evaluasi model dilakukan menggunakan metrik berikut:
 ### Confusion Matrix 
 
 #### IndoBERT
-![Confusion Matrix IndoBERT](images/MAT_IND.png)
+![Confusion Matrix IndoBERT](Images/MAT_IND.png)
 
 #### DistilBERT
-![Confusion Matrix DistilBERT](images/MAT_DISB.png)
+![Confusion Matrix DistilBERT](Images/MAT_DISB.png)
 
 #### DistilBERT
-![Confusion Matrix BERT](images/MAT_BERT.png)
+![Confusion Matrix BERT](Images/MAT_BERT.png)
 
 #### LSTM
-![Confusion Matrix LSTM](images/MAT_LSTM.png)
+![Confusion Matrix LSTM](Images/MAT_LSTM.png)
 
 ### Learning Curves 📈
 
 #### LSTM
-![Learning Curve LSTM](images/LC_LSTM.png)
+![Learning Curve LSTM](Images/LC_LSTM.png)
 
 #### IndoBERT
-![Learning Curve IndoBERT](images/LC_IND.png)
+![Learning Curve IndoBERT](Images/LC_IND.png)
 
 ---
 
@@ -166,3 +166,4 @@ pip install streamlit tensorflow transformers torch scikit-learn
 
 Pastikan berada di folder project, lalu jalankan: streamlit run app.py
 Aplikasi akan berjalan pada browser melalui alamat: http://localhost:8501
+
