@@ -1,4 +1,13 @@
-# Klasifikasi Sentimen Komentar Game Genshin Impact (UAP)
+<h1 align="center">🎮 KLASIFIKASI SENTIMEN KOMENTAR GENSHIN IMPACT</h1>
+
+<div align="center">
+  <img src="Images/genshin.jpg" alt="Genshin Impact Banner" width="600">
+  <p>
+    <small>
+      Sumber gambar: Genshin Impact
+    </small>
+  </p>
+</div>
 
 ---
 
@@ -161,3 +170,4 @@ Aplikasi Streamlit digunakan untuk mendemonstrasikan prediksi sentimen secara in
 ### 1️⃣ Install Dependensi
 ```bash
 pip install streamlit tensorflow transformers torch scikit-learn
+
