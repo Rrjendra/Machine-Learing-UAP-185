@@ -14,7 +14,7 @@
 
 ---
 
-## 📌 Deskripsi Proyek
+## Deskripsi Proyek 📌
 
 Proyek ini merupakan tugas **Ujian Akhir Praktikum (UAP)** yang bertujuan untuk melakukan **klasifikasi sentimen terhadap komentar pemain game Genshin Impact** berbahasa Indonesia.  
 Analisis sentimen dilakukan menggunakan pendekatan **Machine Learning**, dengan membandingkan model **non-pretrained** dan **pretrained (transfer learning)** berbasis **Deep Learning**.
@@ -23,7 +23,7 @@ Selain itu, proyek ini dilengkapi dengan **sistem website sederhana berbasis Str
 
 ---
 
-## 📊 Dataset
+## Dataset 📊
 
 - **Jenis Data**: Data teks (komentar pemain)
 - **Bahasa**: Bahasa Indonesia (dengan campuran istilah game dan bahasa Inggris)
@@ -87,7 +87,7 @@ Pada proyek ini **tidak diterapkan data augmentation**, karena dataset yang digu
 
 ---
 
-## 📈 Evaluasi Model
+## Evaluasi Model 📈
 
 Evaluasi model dilakukan menggunakan metrik berikut:
 - Accuracy
@@ -128,7 +128,7 @@ Evaluasi model dilakukan menggunakan metrik berikut:
 
 ---
 
-## 🔍 Analisis Hasil
+## Analisis Hasil 🔍
 
 Berdasarkan hasil evaluasi, **model pretrained berbasis Transformer** secara konsisten menunjukkan performa yang lebih baik dibandingkan model **LSTM non-pretrained**.  
 
@@ -141,7 +141,7 @@ Hal ini menunjukkan bahwa **Transfer Learning sangat efektif** untuk tugas klasi
 
 ---
 
-## 🌐 Sistem Website (Streamlit)
+## Sistem Website (Streamlit) 🔍
 
 Sistem website sederhana dibangun menggunakan **Streamlit** untuk mendemonstrasikan hasil klasifikasi sentimen secara interaktif.  
 Aplikasi dijalankan **secara lokal** menggunakan model hasil pelatihan.
@@ -153,7 +153,7 @@ Aplikasi dijalankan **secara lokal** menggunakan model hasil pelatihan.
 
 ---
 
-## ▶️ Cara Menjalankan Aplikasi (Lokal)
+## Cara Menjalankan Aplikasi (Lokal) ▶️
 
 ### 1️⃣ Install Dependensi
 
@@ -163,6 +163,7 @@ pip install streamlit tensorflow transformers torch scikit-learn
 
 Pastikan berada di folder project, lalu jalankan: streamlit run app.py
 Aplikasi akan berjalan pada browser melalui : http://localhost:8501
+
 
 
 
