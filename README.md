@@ -38,7 +38,7 @@ Selain itu, proyek ini dilengkapi dengan **sistem website sederhana berbasis Str
 Karena ukuran dataset cukup besar, dataset **tidak diunggah langsung ke repository GitHub**.
 
 📊 **Dataset dapat diunduh melalui Google Drive:**  
-👉 **[Link Dataset Google Drive](https://drive.google.com/drive/folders/1XkfMcM0EVBMt7h1sIF6AGkisJ5mdnME9?usp=sharing)**
+👉 **[Link Dataset](https://drive.google.com/drive/folders/1XkfMcM0EVBMt7h1sIF6AGkisJ5mdnME9?usp=sharing)**
 
 Dataset merupakan **hasil scraping dan pelabelan mandiri**, digunakan **khusus untuk keperluan akademik**.
 
@@ -109,25 +109,22 @@ Evaluasi model dilakukan menggunakan metrik berikut:
 
 ### Confusion Matrix 
 
-#### IndoBERT
-![Confusion Matrix IndoBERT](Images/MAT_IND.png)
+## Confusion Matrix 🔴🟢
 
-#### DistilBERT
-![Confusion Matrix DistilBERT](Images/MAT_DISB.png)
+| LSTM | IndoBERT | 
+|------|----------|
+| ![CM LSTM](Images/MAT_LSTM.png) | ![CM IndoBERT](Images/MAT_IND.png) | 
 
-#### DistilBERT
-![Confusion Matrix BERT](Images/MAT_BERT.png)
+| DistilBERT | BERT |
+|------------|------|
+| ![CM DistilBERT](Images/MAT_DISB.png) | ![Confusion Matrix BERT](Images/MAT_BERT.png) |
 
-#### LSTM
-![Confusion Matrix LSTM](Images/MAT_LSTM.png)
 
 ### Learning Curves 📈
 
-#### LSTM
-![Learning Curve LSTM](Images/LC_LSTM.png)
-
-#### IndoBERT
-![Learning Curve IndoBERT](Images/LC_IND.png)
+| LSTM | IndoBERT |
+|------|----------|
+| ![Learning Curve LSTM](Images/LC_LSTM.png) | ![Learning Curve IndoBERT](Images/LC_IND.png) |
 
 ---
 
@@ -165,6 +162,7 @@ pip install streamlit tensorflow transformers torch scikit-learn
 ### 2️⃣ Jalankan Aplikasi Streamlit
 
 Pastikan berada di folder project, lalu jalankan: streamlit run app.py
-Aplikasi akan berjalan pada browser melalui alamat: http://localhost:8501
+Aplikasi akan berjalan pada browser melalui : http://localhost:8501
+
 
 
