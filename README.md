@@ -38,7 +38,7 @@ Selain itu, proyek ini dilengkapi dengan **sistem website sederhana berbasis Str
 Karena ukuran dataset cukup besar, dataset **tidak diunggah langsung ke repository GitHub**.
 
 📊 **Dataset dapat diunduh melalui Google Drive:**  
-👉 https://drive.google.com/drive/folders/1XkfMcM0EVBMt7h1sIF6AGkisJ5mdnME9?usp=sharing  
+👉 **[Link Dataset Google Drive](https://drive.google.com/drive/folders/1XkfMcM0EVBMt7h1sIF6AGkisJ5mdnME9?usp=sharing)**
 
 Dataset merupakan **hasil scraping dan pelabelan mandiri**, digunakan **khusus untuk keperluan akademik**.
 
@@ -166,4 +166,5 @@ pip install streamlit tensorflow transformers torch scikit-learn
 
 Pastikan berada di folder project, lalu jalankan: streamlit run app.py
 Aplikasi akan berjalan pada browser melalui alamat: http://localhost:8501
+
 
