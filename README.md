@@ -16,6 +16,7 @@
 6. [Analisis Hasil](#analisis-hasil)
 7. [Sistem Website (Streamlit)](#sistem-website-streamlit)
 8. [Cara Menjalankan Aplikasi (Lokal)](#cara-menjalankan-aplikasi-lokal)
+9. [Identitas](#Identitas)
 
 ---
 
@@ -135,6 +136,10 @@ Evaluasi dilakukan menggunakan:
 |------|----------|
 | ![LC LSTM](Images/LC_LSTM.png) | ![LC IndoBERT](Images/LC_IND.png) |
 
+| DistilBERT | BERT |
+|------------|------|
+| ![LC LSTM](Images/LC_DISB.png) | ![LC IndoBERT](Images/LC_BERT.png) |
+
 ---
 
 <h1 id="analisis-hasil" align="center">🔍 Analisis Hasil 🔍</h1>
@@ -163,9 +168,35 @@ Aplikasi Streamlit digunakan untuk mendemonstrasikan prediksi sentimen secara in
 
 <h1 id="cara-menjalankan-aplikasi-lokal" align="center">▶️ Cara Menjalankan Aplikasi (Lokal)</h1>
 
-### 1️⃣ Install Dependensi
+### 1️⃣ Download Pada Link Berikut
+
+👉 **[Link Model – Google Drive](https://drive.google.com/drive/folders/1XkfMcM0EVBMt7h1sIF6AGkisJ5mdnME9?usp=sharing)**
+
+### 2️⃣ Clone repository dan masuk ke direktori proyek
+
+### 3️⃣ Install Dependensi
+
 ```bash
 pip install streamlit tensorflow transformers torch scikit-learn
 
+```
+### 4️⃣ Jalankan Streamlit
 
+```bash
+streamlit run app.py
+
+```
+
+<h1 id="Identitas" align="center">👨‍💻 Identitas </h1>
+
+
+Nama: Rasyid Rajendra Aji
+
+NIM: 202210370311185
+
+Kelas: Machine Learning C
+
+Program Studi: Informatika
+
+Universitas: Universitas Muhammadiyah Malang
 
